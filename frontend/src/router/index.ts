@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Dashboard from '@/views/Dashboard.vue'
 const Plant = () => import('@/views/plant/index.vue')
+const PlantDetail = () => import('@/views/plant/detail.vue')
 const Intakepump = () => import('@/views/intakepump/index.vue')
 const Dosing = () => import('@/views/dosing/index.vue')
 const Sedimentation = () => import('@/views/sedimentation/index.vue')
@@ -25,6 +26,7 @@ const router = createRouter({
   routes: [
     { path: '/', name: 'dashboard', component: Dashboard },
     { path: '/plant', name: 'plant', component: Plant },
+    { path: '/plant/:id(\\d+)', name: 'plant-detail', component: PlantDetail },
     { path: '/intakepump', name: 'intakepump', component: Intakepump },
     { path: '/dosing', name: 'dosing', component: Dosing },
     { path: '/sedimentation', name: 'sedimentation', component: Sedimentation },

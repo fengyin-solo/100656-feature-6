@@ -82,7 +82,7 @@ import {
 import type { EntryRow } from '@/data/types'
 
 const meta = moduleMeta('intakepump')
-const columns = ["泵组编号", "所属水厂", "泵组型号", "额定流量", "运行电流", "运行班组", "启停时间", "泵组状态"]
+const columns = ["泵组编号", "所属水厂", "泵组型号", "额定流量", "运行电流", "运行班组", "启停时间", "泵组状态", "启泵待办"]
 const actions = ["提交启泵", "登记停泵", "上报故障"]
 const statuses = ["待启泵", "运行中", "已停泵", "故障停泵"]
 const stats = [{"label": "待启泵组", "value": 0}, {"label": "运行中泵组", "value": 0}, {"label": "故障停泵数", "value": 0}]

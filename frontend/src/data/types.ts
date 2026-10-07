@@ -18,6 +18,8 @@ export type ModuleMeta = {
   actions: string[]
   actionTargets: Record<string, string>
   metrics: string[]
+  // 状态是否只能顺着状态列表逐级往前走（不跳级、不回头）；缺省按通用动作处理。
+  linearFlow?: boolean
 }
 
 export type PageResult = {
