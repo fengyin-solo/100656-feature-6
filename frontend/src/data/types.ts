@@ -18,6 +18,9 @@ export type ModuleMeta = {
   actions: string[]
   actionTargets: Record<string, string>
   metrics: string[]
+  // 状态流转白名单：键为当前状态，值为该状态下允许到达的下一个状态。
+  // 不配置时沿用「动作目标即结果」的通用行为；配置后只能顺着名单往下走，不能跳级、不能折返。
+  transitions?: Record<string, string[]>
 }
 
 export type PageResult = {
